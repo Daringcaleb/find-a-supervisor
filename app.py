@@ -8,8 +8,7 @@ es = connect_elasticsearch()
 app = Flask(__name__)
 
 
-@app.route('/')
-@app.route("/index.html", methods=['GET', 'POST'])
+@app.route("/", methods=['GET', 'POST'])
 def home():
     if request.method == "POST":
         query = request.form.get('search')
