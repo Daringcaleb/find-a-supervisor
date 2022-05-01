@@ -37,29 +37,3 @@ def home():
 #     documents = json.load(f)
 #     data = client.index_documents(engine_name, documents)
 #     return render_template("about.html", data=data)
-
-
-if __name__ == "__main__":
-    app.run(debug=True)
-
-#     # initialize using environment variables
-
-
-# apm = ElasticAPM(app)
-
-# app.config['ELASTIC_APM'] = {
-#     # Set the required service name. Allowed characters:
-#     # a-z, A-Z, 0-9, -, _, and space
-#     'SERVICE_NAME': 'test',
-
-#     # Use if APM Server requires a secret token
-#     'SECRET_TOKEN': 'FEXJW2IoBcN5o1fdmMm4cLWA',
-
-#     # Set the custom APM Server URL (default: http://localhost:8200)
-#     'SERVER_URL': 'https://64f5528e99b64681983dfa057f6fa368.apm.us-central1.gcp.cloud.es.io:443',
-
-#     # Set the service environment
-#     'ENVIRONMENT': 'production',
-# }
-
-# apm = ElasticAPM(app)
