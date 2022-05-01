@@ -1,24 +1,15 @@
-from urllib import response
-
-from numpy import require
 from connection import connect_elasticsearch
-from models import *
+# from models import *
 from flask import Flask, render_template, request
-from flask_babel import _, get_locale
-from elasticsearch import Elasticsearch
-from elasticapm.contrib.flask import ElasticAPM
-# or configure to use ELASTIC_APM in your application's settings
-from elasticapm.contrib.flask import ElasticAPM
-
+from flask_babel import _
 
 es = connect_elasticsearch()
-
-# const_url = "https://researchers.wlv.ac.uk/"
 
 app = Flask(__name__)
 
 
-@app.route("/", methods=['GET', 'POST'])
+@app.route('/')
+@app.route("/index.html", methods=['GET', 'POST'])
 def home():
     if request.method == "POST":
         query = request.form.get('search')
@@ -49,26 +40,26 @@ def home():
 
 
 if __name__ == "__main__":
-    app.run(port=5005, debug=True, host="0.0.0.0")
+    app.run(debug=True)
 
-    # initialize using environment variables
+#     # initialize using environment variables
 
 
-apm = ElasticAPM(app)
+# apm = ElasticAPM(app)
 
-app.config['ELASTIC_APM'] = {
-    # Set the required service name. Allowed characters:
-    # a-z, A-Z, 0-9, -, _, and space
-    'SERVICE_NAME': 'test',
+# app.config['ELASTIC_APM'] = {
+#     # Set the required service name. Allowed characters:
+#     # a-z, A-Z, 0-9, -, _, and space
+#     'SERVICE_NAME': 'test',
 
-    # Use if APM Server requires a secret token
-    'SECRET_TOKEN': 'FEXJW2IoBcN5o1fdmMm4cLWA',
+#     # Use if APM Server requires a secret token
+#     'SECRET_TOKEN': 'FEXJW2IoBcN5o1fdmMm4cLWA',
 
-    # Set the custom APM Server URL (default: http://localhost:8200)
-    'SERVER_URL': 'https://64f5528e99b64681983dfa057f6fa368.apm.us-central1.gcp.cloud.es.io:443',
+#     # Set the custom APM Server URL (default: http://localhost:8200)
+#     'SERVER_URL': 'https://64f5528e99b64681983dfa057f6fa368.apm.us-central1.gcp.cloud.es.io:443',
 
-    # Set the service environment
-    'ENVIRONMENT': 'production',
-}
+#     # Set the service environment
+#     'ENVIRONMENT': 'production',
+# }
 
-apm = ElasticAPM(app)
+# apm = ElasticAPM(app)
