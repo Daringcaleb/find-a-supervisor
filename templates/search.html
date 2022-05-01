@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="s130">
+    <form method="POST" action="/">
+        <input id="search" type="text" placeholder="Type to search..." name="search" value="{{search}}" />
+        <button class="btn-search" type="submit">SEARCH</button>
+    </form>
+</div>
+{% endblock %}
