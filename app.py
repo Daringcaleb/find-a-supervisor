@@ -3,7 +3,7 @@ from urllib import response
 from numpy import require
 from connection import connect_elasticsearch
 from models import *
-from flask import Flask, render_template, redirect, url_for, request, g, current_app
+from flask import Flask, render_template, request
 from flask_babel import _, get_locale
 from elasticsearch import Elasticsearch
 from elasticapm.contrib.flask import ElasticAPM
