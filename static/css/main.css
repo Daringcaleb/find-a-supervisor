@@ -169,11 +169,13 @@ body {
   font-family: proxima-nova, sans-serif;
   font-variant-ligatures: no-common-ligatures;
   -webkit-text-size-adjust: 100%;
+  word-wrap: break-word;
 }
 
 .textss {
   font-size: 85%;
   font-weight: 800;
+  word-wrap: break-word;
 }
 
 .top_header {
