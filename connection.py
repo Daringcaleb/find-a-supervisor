@@ -3,8 +3,6 @@ from elasticsearch import Elasticsearch, helpers
 import configparser
 
 
-# ES_USER = 'elastic'
-# ES_PASSWORD = 'f1HlWdYnnlk8f3kbB+o1'
 
 
 def connect_elasticsearch():
