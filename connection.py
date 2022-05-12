@@ -1,6 +1,4 @@
-import json
-from elasticsearch import Elasticsearch, helpers
-import configparser
+from elasticsearch import Elasticsearch
 
 
 
