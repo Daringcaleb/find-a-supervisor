@@ -21,6 +21,7 @@ def connect_elasticsearch():
 
 connect_elasticsearch()
 
+#### commented
 
 # def load_data():
 #     es = connect_elasticsearch()
